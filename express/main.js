@@ -10,11 +10,14 @@ const minutos = Math.floor(delta / 60) % 60;
 delta -= minutos * 60;
 const segundos = delta % 60;
 
-const texto = `Faltam ${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos.toFixed(
-  0
-)} segundos`;
+const textoDias = `${dias} dias`;
+const textoHoras = `${horas} horas`;
+const textoMinutos = `${minutos} minutos`;
+const textoSegundos = `${segundos.toFixed(0)} segundos`;
+const conteudos = [textoDias, textoHoras, textoMinutos, textoSegundos];
 
-const quantityContainer = document.getElementById("quantityContainer");
+const quantityContainer = document.getElementsByClassName("quantityContainer");
 
-quantityContainer.append(texto);
-quantityContainer.append(texto);
+conteudos.forEach((conteudo, index) => {
+  quantityContainer.item(index).append(conteudo)
+})
