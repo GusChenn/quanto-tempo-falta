@@ -2,8 +2,110 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
 }
 
-.quantityContainer {
-  font-family: 'Roboto';
+.texture {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url(images/Texture.png);
+  background-repeat: repeat;
+  background-blend-mode: lighten;
+
+  position: relative;
+  mix-blend-mode: overlay;
+}
+
+.background-color {
+  width: 100vw;
+  height: 100vh;
+  background-color: #F4DFB7;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.background-gradient {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-image: url(images/Gradient.svg);
+
+  position: absolute;
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+  padding: 100px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.quote {
+  width: 100%;
+  text-align: right;
+  font-weight: light;
+  font-size: 20px;
+}
+
+.countdown {
+  margin: 250px 180px;
+  display: flex;
+  flex-direction: column;
+}
+
+.faltam {
+  text-align: left;
+  font-weight: 400;
+  font-size: 30px;
+  margin-left: 8px;
+}
+
+.days {
+  text-align: left;
+  font-weight: 600;
+  font-size: 100px;
+}
+
+.dias {
+  font-weight: 400;
+  font-size: 50px;
+  margin-left: 20px;
+}
+
+.hours {
+  font-weight: 400;
+  font-size: 70px;
+}
+
+.separator {
+  font-weight: 400;
+  font-size: 70px;
+  margin: 0 5px;
+}
+
+.minutes {
+  font-weight: 400;
+  font-size: 70px;
+}
+
+.seconds {
+  font-weight: 400;
+  font-size: 40px;
+  margin-left: 20px;
 }

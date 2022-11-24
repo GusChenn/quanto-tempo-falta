@@ -4,20 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="main.js" defer></script>
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <title>Quantos dias faltam</title>
   </head>
   <body>
-    <div class="pageContainer">
-      <header class="header">Faltam:</header>
-      <h2 class="quantityContainer"></h2>
-      <h2 class="quantityContainer"></h2>
-      <h2 class="quantityContainer"></h2>
-      <h2 class="quantityContainer"></h2>
-      <footer class="footer">dias pra acabar</footer>
+    <div class="background-color"></div>
+    <div class="background-gradient"></div>
+    <div class="texture"></div>
+    <div class="content">
+      <section class="quote">
+        Contagem de quantos dias faltam para a apresentação do TCC
+      </section>
+      <section class="countdown">
+        <div class="faltam">Faltam</div>
+        <div class="row">
+          <div class="quantityContainer days"></div>
+          <div class="dias">Dias</div>
+        </div>
+        <div class="row">
+          <div class="quantityContainer hours"></div>
+          <div class="separator">:</div>
+          <div class="quantityContainer minutes"></div>
+          <div class="quantityContainer seconds"></div>
+        </div>
+      </section>
+      <footer>
+        Icones dos links
+      </footer>
     </div>
   </body>
 </html>
