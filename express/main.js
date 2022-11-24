@@ -1,5 +1,4 @@
-const hoje = Date.now();
-const formatura = new Date('2022-12-22').getTime();
+const graduation = new Date('2022-12-22').getTime();
 
 const timeCalculator = (now, targetDate) => {
   let delta = Math.abs(targetDate - now) / 1000;
@@ -12,27 +11,16 @@ const timeCalculator = (now, targetDate) => {
   const seconds = delta % 60;
 
   return [
-    toString(days), toString(hours), toString(minutes), toString(seconds.toFixed(0)),
+    days, hours, minutes, seconds.toFixed(0),
   ];
 };
 
-let delta = Math.abs(formatura - hoje) / 1000;
-const dias = Math.floor(delta / 86400);
-delta -= dias * 86400;
-const horas = Math.floor(delta / 3600) % 24;
-delta -= horas * 3600;
-const minutos = Math.floor(delta / 60) % 60;
-delta -= minutos * 60;
-const segundos = delta % 60;
-
-const textoDias = `${dias}`;
-const textoHoras = `${horas}`;
-const textoMinutos = `${minutos}`;
-const textoSegundos = `${segundos.toFixed(0)}`;
-const conteudos = [textoDias, textoHoras, textoMinutos, textoSegundos];
-
 const quantityContainer = document.getElementsByClassName('quantityContainer');
 
-conteudos.forEach((conteudo, index) => {
-  quantityContainer.item(index).append(conteudo);
-});
+setInterval(() => {
+  const now = Date.now();
+  const contents = timeCalculator(now, graduation);
+  contents.forEach((content, index) => {
+    quantityContainer.item(index).innerHTML = (content);
+  });
+}, 1000);
