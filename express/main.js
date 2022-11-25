@@ -15,12 +15,16 @@ const timeCalculator = (now, targetDate) => {
   ];
 };
 
+const timeFormatter = (value) => (value > 9
+  ? value
+  : `0${value}`);
+
 const quantityContainer = document.getElementsByClassName('quantityContainer');
 
 setInterval(() => {
   const now = Date.now();
   const contents = timeCalculator(now, graduation);
   contents.forEach((content, index) => {
-    quantityContainer.item(index).innerHTML = (content);
+    quantityContainer.item(index).innerHTML = (timeFormatter(content));
   });
 }, 1000);
